@@ -15,6 +15,13 @@ router.get('/', (req, res, next) => {
   res.render('index', { title: 'Cript AES', result: '' });
 });
 
+/* GET gerador de chave. */
+router.get('/gerarChave', index_controller.getGerarChaves);
+
+router.get('/DecriptyKey', index_controller.DecriptyKey);
+
+router.get('/EncriptyKey', index_controller.EncriptyKey);
+
 /* POST enviar form. */
 router.post('/', upload.single('arquivo'), index_controller.post);
 
